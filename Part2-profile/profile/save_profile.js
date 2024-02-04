@@ -52,8 +52,18 @@ $(document).ready( () => {
             $("#dob").next().text("Please enter a valid date in MM/DD/YYYY format.");
         }
         
+
+        // Data is stored in the session storage
         if (isValid) { 
+
+            sessionStorage.setItem("email", email);            
+            sessionStorage.setItem("phone", phone);             
+            sessionStorage.setItem("postal", postal);             
+            sessionStorage.setItem("dob", dob);
+             
+            location.href="profile.html";
             // code that saves profile info goes here
+          
         }
         
         $("#email").focus(); 

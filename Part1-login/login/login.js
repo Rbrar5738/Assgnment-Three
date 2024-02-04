@@ -1,31 +1,31 @@
 "use strict";
 
 const getCookieByName = name => {
-    const cookies = document.cookie;
+    const cookieDate = document.cookie;
 
-    let begin = cookies.indexOf(name + "=");
-    if (begin === -1) {
+    let startCookie = cookieDate.indexOf(name + "=");
+    if (startCookie === -1) {
          return ""; 
     }
     else { 
-        begin = begin + (name.length + 1);
-        let end = cookies.indexOf(";", begin);
-        if (end === -1) { 
-            end = cookies.length;
+        startCookie = startCookie + (name.length + 1);
+        let finishCookieData = cookieDate.indexOf(";", startCookie);
+        if (finishCookieData === -1) { 
+            finishCookieData = cookieDate.length;
         }
-        const cookie_data = cookies.substring(begin, end);
+        const cookie_data = cookieDate.substring(startCookie, finishCookieData);
         return decodeURIComponent(cookie_data);
     }
 
 };
 
 const setCookie = (name, value, days) => {
-    let cookie_info = name + "=" + encodeURIComponent(value);
+    let cookieInfo = name + "=" + encodeURIComponent(value);
     if (days) {
-        cookie_info += "; max-age=" + days * 24 * 60 * 60;
+        cookieInfo += "; max-age=" + days * 24 * 60 * 60;
     }
-    cookie_info += "; path=/";
-    document.cookie = cookie_info;
+    cookieInfo += "; path=/";
+    document.cookie = cookieInfo;
 };
 
 const deleteCookie = name => {

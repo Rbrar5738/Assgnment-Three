@@ -8,8 +8,8 @@ $(document).ready( () => {
 	$('#postal').html(sessionStorage.getItem("postal"));
 	$('#dob').html(sessionStorage.getItem("dob"));
 	
-	$("back").click( () => {
-
+	$("#back").click( () => {
+// code to move back in the history object
 		history.back();
 		
 	}); // end of click()

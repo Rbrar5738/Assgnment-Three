@@ -2,7 +2,7 @@
 
 const getCookieByName = name => {
     const cookieDate = document.cookie;
-
+// Cookie variable is created to store cookie data
     let startCookie = cookieDate.indexOf(name + "=");
     if (startCookie === -1) {
          return ""; 
@@ -19,6 +19,7 @@ const getCookieByName = name => {
 
 };
 
+// Cookied age is set
 const setCookie = (name, value, days) => {
     let cookieInfo = name + "=" + encodeURIComponent(value);
     if (days) {
@@ -28,10 +29,12 @@ const setCookie = (name, value, days) => {
     document.cookie = cookieInfo;
 };
 
+// Cookied delete code
 const deleteCookie = name => {
     document.cookie = name + "=''; max-age=0; path=/";
 };
 
+// Navigate to url 
 const goToPage = url => {
     location.href = url;
 };

@@ -9,6 +9,8 @@ $(document).ready( () => {
 	$('#dob').html(sessionStorage.getItem("dob"));
 	
 	$("back").click( () => {
+
+		history.back();
 		
 	}); // end of click()
 	

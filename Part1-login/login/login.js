@@ -8,6 +8,7 @@ const getCookieByName = name => {
          return ""; 
     }
     else { 
+        // Cookie data is set
         startCookie = startCookie + (name.length + 1);
         let finishCookieData = cookieDate.indexOf(";", startCookie);
         if (finishCookieData === -1) { 
@@ -19,7 +20,7 @@ const getCookieByName = name => {
 
 };
 
-// Cookied age is set
+// Cookie age is set
 const setCookie = (name, value, days) => {
     let cookieInfo = name + "=" + encodeURIComponent(value);
     if (days) {

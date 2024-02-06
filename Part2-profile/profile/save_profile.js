@@ -55,14 +55,14 @@ $(document).ready( () => {
 
         // Data is stored in the session storage
         if (isValid) { 
-
+              // code that saves profile info goes here
             sessionStorage.setItem("email", email);            
             sessionStorage.setItem("phone", phone);             
             sessionStorage.setItem("postal", postal);             
             sessionStorage.setItem("dob", dob);
              
             location.href="profile.html";
-            // code that saves profile info goes here
+          
           
         }
         

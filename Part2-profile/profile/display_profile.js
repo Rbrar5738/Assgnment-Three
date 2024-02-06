@@ -2,7 +2,6 @@
 
 $(document).ready( () => {
 	// display data from session storage
-
 	$('#email').html(sessionStorage.getItem("email"));	
 	$('#phone').html(sessionStorage.getItem("phone"));
 	$('#postal').html(sessionStorage.getItem("postal"));
